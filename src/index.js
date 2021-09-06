@@ -20,7 +20,11 @@ const onClick = () => {
   //削除ボタンの生成
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "削除";
-  //deleteButton.addEventListener("click",() => {});
+  //削除機能
+  deleteButton.addEventListener("click", () => {
+    const deleteTarget = deleteButton.parentNode;
+    document.getElementById("incomplete-list").removeChild(deleteTarget);
+  });
 
   div.appendChild(deleteButton);
 
