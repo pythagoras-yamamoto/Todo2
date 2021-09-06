@@ -1,3 +1,59 @@
 body {
   font-family: sans-serif;
 }
+
+input {
+  border: none;
+  padding: 6px 10px;
+}
+
+button {
+  border-radius: 16px;
+  border: none;
+  padding: 4px 16px;
+  outline: none;
+}
+
+button:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.input-area {
+  background-color: #c1ffff;
+  width: 400px;
+  height: 30px;
+  padding: 8px 16px;
+  margin: 10px;
+}
+
+.incomplete-area {
+  background-color: #c1ffff;
+  width: 400px;
+  min-height: 150px;
+  padding: 8px 16px;
+  margin: 10px;
+}
+
+.complete-area {
+  background-color: #c1ffff;
+  width: 400px;
+  min-height: 150px;
+  padding: 8px 16px;
+  margin: 10px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.list-low {
+  display: flex;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+li {
+  margin-right: 10px;
+}
