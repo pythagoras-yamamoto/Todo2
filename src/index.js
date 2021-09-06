@@ -18,8 +18,7 @@ const onClick = () => {
   div.appendChild(completeButton);
   //完了機能
   completeButton.addEventListener("click", () => {
-    const deleteTarget = completeButton.parentNode;
-    document.getElementById("incomplete-list").removeChild(deleteTarget);
+    deleteFromIncompleteList(completeButton.parentNode);
   });
 
   //削除ボタンの生成
@@ -27,13 +26,16 @@ const onClick = () => {
   deleteButton.innerText = "削除";
   //削除機能
   deleteButton.addEventListener("click", () => {
-    const deleteTarget = deleteButton.parentNode;
-    document.getElementById("incomplete-list").removeChild(deleteTarget);
+    deleteFromIncompleteList(deleteButton.parentNode);
   });
 
   div.appendChild(deleteButton);
-
   document.getElementById("incomplete-list").appendChild(div);
+};
+
+//未完了TODOの削除機能
+const deleteFromIncompleteList = (deleteTarget) => {
+  document.getElementById("incomplete-list").removeChild(deleteTarget);
 };
 
 document
