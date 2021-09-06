@@ -19,6 +19,20 @@ const onClick = () => {
   //完了機能
   completeButton.addEventListener("click", () => {
     deleteFromIncompleteList(completeButton.parentNode);
+    const addTarget = completeButton.parentNode;
+    const text = addTarget.firstElementChild.innerText;
+
+    addTarget.textContent = null;
+    const li = document.createElement("li");
+    li.innerText = text;
+
+    const backButton = document.createElement("button");
+    backButton.innerText = "戻す";
+
+    addTarget.appendChild(li);
+    addTarget.appendChild(backButton);
+
+    document.getElementById("complete-list").appendChild(addTarget);
   });
 
   //削除ボタンの生成
