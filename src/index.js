@@ -16,6 +16,11 @@ const onClick = () => {
   const completeButton = document.createElement("button");
   completeButton.innerText = "完了";
   div.appendChild(completeButton);
+  //完了機能
+  completeButton.addEventListener("click", () => {
+    const deleteTarget = completeButton.parentNode;
+    document.getElementById("incomplete-list").removeChild(deleteTarget);
+  });
 
   //削除ボタンの生成
   const deleteButton = document.createElement("button");
